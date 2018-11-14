@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Circle in Square</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <body>   
+
+ <svg class="picture" width="1000" height="1000" >
+  <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%"x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:rgb(255,182,193);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,20,147);stop-opacity:1" />
+      </linearGradient>
+      <linearGradient id="grad2" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,20,147);stop-opacity:1" />
+      </linearGradient>    
+      <radialGradient id="radGrad"> 
+        <stop offset="0%" stop-color="cyan"/> 
+        <stop offset="100%" stop-color="white"/> 
+      </radialGradient>  
+  </defs>
+   
+  <path id="top" d="m0,0 l 300,0 l 0,150 l -100,0 a 10,10 0 0,0 -100,0 l -100,0 z" style="stroke:none; fill:url(#grad1)"/>  
+  <circle id="circle" cx="150" cy="150" r="50" style="stroke:none; fill:url(#radGrad)"/>   
+  <path id="bottom" d="m0,300 l 300,0 l 0,-150 l -100,0 a 10,10 0 0,1 -100,0 l -100,0 z" style="stroke:none; fill:url(#grad2)"/>
+  </svg>
+  
+  <!--slider-->
+<div class="sliderContainer">
+  <input class="slider" type="range" value="50" min="10" max="100" step="10">
+  <span class="display">50</span>
+  <span id="debug">m0,0 l 300,0 l 0,150 l-100,0 a 10,10 0 0,0 -100,0 l -100,0 z</span>
+</div>
+
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

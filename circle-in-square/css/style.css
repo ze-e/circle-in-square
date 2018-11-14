@@ -1,0 +1,72 @@
+body {
+  background-image: linear-gradient(black, white);
+  height:100vh;
+}
+
+.picture {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  max-height:300px;
+  max-width:300px;
+  overflow: visible;
+}
+
+#circle{
+  -webkit-animation: slidein 5s linear 1s infinite alternate;
+          animation: slidein 5s linear 1s infinite alternate;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+@-webkit-keyframes slidein {
+  from { -webkit-transform : translateY(-50%); transform : translateY(-50%) }
+  to   { -webkit-transform : translateY(50%); transform : translateY(50%) }
+}
+
+@keyframes slidein {
+  from { -webkit-transform : translateY(-50%); transform : translateY(-50%) }
+  to   { -webkit-transform : translateY(50%); transform : translateY(50%) }
+}
+
+/*Slider*/
+.sliderContainer{
+  color:white;
+  margin-top:30px;
+  position:fixed;
+}
+
+#debug{
+  color:gray;
+}
+
+.slider{
+    opacity: 0.7; 
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    border:1px 1 white;
+    background: cyan;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    background: cyan;
+    cursor: pointer;
+}
+
+.slider:hover {
+    opacity: 1; 
+}
